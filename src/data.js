@@ -19,17 +19,25 @@ export const projects = [
   {
     id: 2,
     title: "Lost ID System",
-    description: "University ID management system created for tracking lost credentials.",
-    tech: ["Node.js", "PostgreSQL"],
-    liveUrl: "#",
-    githubUrl: "#"
+    description: "Lost ID Automation System that simplifies the process of reporting, tracking, and requesting replacement of lost university ID cards. The system allows users to submit lost or found ID reports, while administrators can manage requests efficiently through a secure dashboard.",
+    tech: ["HTML", "CSS","JavaScript","Node.js", "PostgreSQL"],
+    liveUrl: "",
+    githubUrl: "https://github.com/kidistm03/lost-id-automation-"
   },
   {
     id: 3,
-    title: "Portfolio",
-    description: "Personal React portfolio website showcasing skills and work.",
-    tech: ["React", "CSS"],
-    liveUrl: "#",
-    githubUrl: "#"
+    title: "what-i-love-project",
+    description: "modern, responsive, and user-friendly website website about something I really enjoy: paper crafts and home decoration.",
+    tech: ["HTML", "CSS"],
+    liveUrl: "https://what-i-love-project-ruddy.vercel.app/",
+    githubUrl: "https://github.com/kidistm03/what-i-love-project"
+  },
+  {
+    id: 4,
+    title: "Building-and-Running-mazes",
+    description: "This project is a procedural maze generator and solver built using Python, Pygame, and OpenGL. It visually demonstrates how a maze can be generated using a Depth-First Search (DFS) backtracking algorithm and then solved using a stack-based pathfinding method",
+    tech: ["Python"],
+    liveUrl: "",
+    githubUrl: "https://github.com/kidistm03/Building-and-Running-mazes"
   }
 ];
