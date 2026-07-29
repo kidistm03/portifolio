@@ -1,16 +1,48 @@
-# React + Vite
+# Kidist Meseret - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive personal portfolio web application built with **React**, **Vite**, and **CSS3**. Designed with a sleek dark theme, gold accents, and a card-based layout to showcase software engineering projects, technical skills, and professional experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- **Responsive Design**: Built mobile-first with CSS Grid and Flexbox to deliver a seamless experience across desktop, tablet, and mobile displays.
+- **Modern UI & Theme**: Features a custom dark/gold design palette (`#d4af37`), smooth scroll navigation, and glassmorphic card elements.
+- **Component Architecture**: Modular React components (`Hero`, `About`, `Skills`, `Projects`, `Contact`, `Footer`) for easy maintenance and clean separation of concerns.
+- **Interactive UI**: Custom hover cards, border glow transitions, and responsive navigation links.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React 18
+- **Build Tool**: Vite
+- **Styling**: Vanilla CSS (CSS Variables, Flexbox, CSS Grid, Media Queries)
+- **Deployment**: Vercel 
+
+
+
+##  Project Structure
+
+```text
+portfolio/
+├── public/
+│   └── image.jpg          # Profile photo asset
+├── src/
+│   ├── components/
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── ProjectCard.jsx
+│   │   ├── Projects.jsx
+│   │   ├── SkillCard.jsx
+│   │   └── Skills.jsx
+│   ├── styles/
+│   │   └── style.css      # Global styles, layout, theme variables
+│   ├── App.jsx            # Main application layout
+│   ├── data.js            # Skill & Project structured data
+│   └── main.jsx           # App entry point
+├── package.json
+└── README.md
