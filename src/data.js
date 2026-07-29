@@ -4,26 +4,32 @@ export const skillsData = [
   "JavaScript",
   "React",
   "Python",
-  "Git"
+  "Git/Github"
 ];
 
-export const projectsData = [
+export const projects = [
   {
     id: 1,
-    title: "Habesha Market",
-    description: "Simple shopping website with modern user layout.",
-    tech: ["HTML", "CSS"]
+    title: "tic-tac-toe",
+    description: "A classic 2-player Tic-Tac-Toe web application featuring clean state management, win/draw detection algorithms, and an intuitive user interface.",
+    tech: ["HTML", "CSS","JavaScript"],
+    liveUrl: "https://tic-tac-toe-ruby-delta.vercel.app/",
+    githubUrl: "https://github.com/kidistm03/tic-tac-toe"
   },
   {
     id: 2,
     title: "Lost ID System",
     description: "University ID management system created for tracking lost credentials.",
-    tech: ["Node.js", "PostgreSQL"]
+    tech: ["Node.js", "PostgreSQL"],
+    liveUrl: "#",
+    githubUrl: "#"
   },
   {
     id: 3,
     title: "Portfolio",
     description: "Personal React portfolio website showcasing skills and work.",
-    tech: ["React", "CSS"]
+    tech: ["React", "CSS"],
+    liveUrl: "#",
+    githubUrl: "#"
   }
 ];

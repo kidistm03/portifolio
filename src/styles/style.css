@@ -462,3 +462,26 @@ section {
     text-align: center;
   }
 }
+/* Container spacing for project card links */
+.project-links {
+  display: flex;
+  gap: 15px; /* Adds space between the links */
+  margin-top: 15px; /* Adds space above the links */
+}
+
+/* Optional styling to make them look like buttons matching your gold theme */
+.project-links a {
+  color: var(--primary-gold);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 14px;
+  border: 1px solid var(--primary-gold);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+}
+
+.project-links a:hover {
+  background-color: var(--primary-gold);
+  color: #000000;
+}

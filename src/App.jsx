@@ -6,7 +6,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-import { skillsData, projectsData } from './data';
+import { skillsData } from './data';
 import './styles/style.css';
 
 export default function App() {
@@ -16,7 +16,7 @@ export default function App() {
       <Hero />
       <About />
       <Skills skills={skillsData} />
-      <Projects projects={projectsData} />
+      <Projects />
       <Contact />
       <Footer />
     </div>
