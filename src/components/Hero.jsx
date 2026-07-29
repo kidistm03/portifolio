@@ -3,16 +3,16 @@ import photo from "../assets/me.jpg";
 function Hero({ name, title }) {
   return (
     <section className="hero">
-      <div className="hero-text">
+      <div className="hero-content">
         <h1>{name}</h1>
         <h3>{title}</h3>
 
         <p>
-          Passionate Software Engineering student who loves creating beautiful,
-          responsive websites and learning modern technologies.
+          Passionate Software Engineering student who enjoys creating modern,
+          responsive websites and learning new technologies.
         </p>
 
-        <button>Download CV</button>
+        <button>View Projects</button>
       </div>
 
       <div className="hero-image">
