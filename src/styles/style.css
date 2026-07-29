@@ -1,35 +1,160 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  background-color: #f4f8fc;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Navbar */
 nav {
+  background-color: #1e3a8a;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: #222;
+  align-items: center;
+  padding: 20px 50px;
 }
 
-nav h2,
+nav h2 {
+  color: white;
+  font-size: 28px;
+}
+
+nav div {
+  display: flex;
+  gap: 20px;
+}
+
 nav a {
   color: white;
   text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
+nav a:hover {
+  color: #facc15;
+}
+
+/* All Sections */
 section {
-  padding: 40px;
-}
-
-.card {
-  border: 1px solid gray;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-}
-
-footer {
+  padding: 70px 10%;
   text-align: center;
-  padding: 20px;
-  background: #222;
+}
+
+section h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+section p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #2563eb, #60a5fa);
   color: white;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+.hero h3 {
+  font-size: 28px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  width: 280px;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 15px;
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h3 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+/* Contact Links */
+#contact a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  color: #f59e0b;
+}
+
+/* Footer */
+footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  nav div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero h3 {
+    font-size: 22px;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
