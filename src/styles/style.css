@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. Global Variables & Base Reset
-   ========================================================================== */
+
 :root {
   --primary-gold: #d4af37;
   --primary-gold-hover: #f3c83e;
@@ -58,9 +56,6 @@ section {
   border-radius: 2px;
 }
 
-/* ==========================================================================
-   2. Navbar Component
-   ========================================================================== */
 .navbar {
   position: sticky;
   top: 0;
@@ -81,10 +76,14 @@ section {
   letter-spacing: 0.5px;
 }
 
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
 .nav-links a {
   color: var(--text-white);
   text-decoration: none;
-  margin-left: 35px;
   font-size: 17px;
   font-weight: 500;
   transition: color var(--transition-fast);
@@ -94,9 +93,6 @@ section {
   color: var(--primary-gold);
 }
 
-/* ==========================================================================
-   3. Hero Component
-   ========================================================================== */
 .hero {
   min-height: 90vh;
   background-color: var(--bg-dark);
@@ -212,9 +208,6 @@ section {
   box-shadow: 0 0 50px rgba(212, 175, 55, 0.65);
 }
 
-/* ==========================================================================
-   4. About Component
-   ========================================================================== */
 .about {
   background-color: #111111;
   border-top: 1px solid var(--border-color);
@@ -228,10 +221,6 @@ section {
   max-width: 800px;
   line-height: 1.8;
 }
-
-/* ==========================================================================
-   5. Skills & SkillCard Components
-   ========================================================================== */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -264,12 +253,9 @@ section {
   color: var(--primary-gold);
 }
 
-/* ==========================================================================
-   6. Projects & ProjectCard Components
-   ========================================================================== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   margin-top: 20px;
 }
@@ -313,7 +299,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: auto;
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 
 .project-tech span {
@@ -328,9 +315,30 @@ section {
   letter-spacing: 0.5px;
 }
 
-/* ==========================================================================
-   7. Contact Component
-   ========================================================================== */
+/* Project Action Links (Live & GitHub) */
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.project-links a {
+  display: inline-block;
+  color: var(--primary-gold);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 18px;
+  border: 1px solid var(--primary-gold);
+  border-radius: 6px;
+  transition: all var(--transition-fast);
+}
+
+.project-links a:hover {
+  background-color: var(--primary-gold);
+  color: #000000;
+}
+
 .contact {
   background-color: #111111;
   border-top: 1px solid var(--border-color);
@@ -372,9 +380,6 @@ section {
   box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
 }
 
-/* ==========================================================================
-   8. Footer Component
-   ========================================================================== */
 .footer {
   text-align: center;
   padding: 30px 10%;
@@ -384,12 +389,15 @@ section {
   border-top: 1px solid var(--border-color);
 }
 
-/* ==========================================================================
-   9. Media Queries (Responsive Layouts)
-   ========================================================================== */
+
+/* Tablets & Small Laptops (under 992px) */
 @media (max-width: 992px) {
   section {
     padding: 70px 6%;
+  }
+
+  .navbar {
+    padding: 18px 6%;
   }
 
   .hero {
@@ -421,27 +429,49 @@ section {
   }
 }
 
+/* Mobile Devices (under 600px) */
 @media (max-width: 600px) {
+  section {
+    padding: 50px 5%;
+  }
+
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
   .navbar {
     flex-direction: column;
     gap: 15px;
     padding: 15px 5%;
+    text-align: center;
   }
 
   .nav-links {
-    display: flex;
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
   }
 
   .nav-links a {
-    margin-left: 0;
     font-size: 15px;
   }
 
   .hero h1 {
-    font-size: 36px;
+    font-size: 34px;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .intro {
+    font-size: 16px;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
   }
 
   .buttons {
@@ -454,34 +484,99 @@ section {
     width: 100%;
   }
 
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-links a {
+    text-align: center;
+    width: 100%;
+  }
+
   .contact-links {
     flex-direction: column;
+    gap: 12px;
   }
 
   .contact-links a {
     text-align: center;
   }
 }
-/* Container spacing for project card links */
-.project-links {
-  display: flex;
-  gap: 15px; /* Adds space between the links */
-  margin-top: 15px; /* Adds space above the links */
+
+
+/* Hide hamburger button by default on desktop */
+.hamburger {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  padding: 0;
+  z-index: 1001;
 }
 
-/* Optional styling to make them look like buttons matching your gold theme */
-.project-links a {
-  color: var(--primary-gold);
-  text-decoration: none;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 6px 14px;
-  border: 1px solid var(--primary-gold);
-  border-radius: 6px;
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary-gold);
+  border-radius: 2px;
   transition: all var(--transition-fast);
 }
 
-.project-links a:hover {
-  background-color: var(--primary-gold);
-  color: #000000;
+/* Transform bars to an 'X' icon when active */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Mobile Media Query for Navigation */
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex; /* Show hamburger button on mobile */
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-navbar);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    
+    /* Hide menu by default */
+    display: none;
+  }
+
+
+  .nav-links.open {
+    display: flex;
+  }
 }
