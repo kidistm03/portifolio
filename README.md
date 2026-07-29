@@ -1,10 +1,10 @@
 # Kidist Meseret - Personal Portfolio
 
-A modern, responsive personal portfolio web application built with **React**, **Vite**, and **CSS3**. Designed with a sleek dark theme, gold accents, and a card-based layout to showcase software engineering projects, technical skills, and professional experience.
+A modern, responsive personal portfolio web application built with **React**, **Vite**. Designed with a sleek dark theme, gold accents, and a card-based layout to showcase software engineering projects, technical skills, and professional experience.
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Responsive Design**: Built mobile-first with CSS Grid and Flexbox to deliver a seamless experience across desktop, tablet, and mobile displays.
 - **Modern UI & Theme**: Features a custom dark/gold design palette (`#d4af37`), smooth scroll navigation, and glassmorphic card elements.
@@ -13,7 +13,7 @@ A modern, responsive personal portfolio web application built with **React**, **
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend**: React 18
 - **Build Tool**: Vite
