@@ -1,18 +1,14 @@
-import SkillCard from "./SkillCard";
+import SkillCard from './SkillCard';
 
-function Skills({ skills }) {
+export default function Skills({ skills }) {
   return (
-    <section id="skills">
-      <h2>Skills</h2>
-
-      {skills.map((skill, index) => (
-        <SkillCard
-          key={index}
-          skill={skill}
-        />
-      ))}
+    <section id="skills" className="skills">
+      <h2 className="section-title">Skills</h2>
+      <div className="skills-grid">
+        {skills.map((skill, index) => (
+          <SkillCard key={index} name={skill} />
+        ))}
+      </div>
     </section>
   );
 }
-
-export default Skills;

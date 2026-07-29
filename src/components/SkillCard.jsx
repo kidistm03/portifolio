@@ -1,9 +1,7 @@
-function SkillCard({ skill }) {
+export default function SkillCard({ name }) {
   return (
-    <div className="card">
-      <p>{skill}</p>
+    <div className="skill-card">
+      <h4>{name}</h4>
     </div>
   );
 }
-
-export default SkillCard;

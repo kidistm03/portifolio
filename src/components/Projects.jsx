@@ -1,20 +1,19 @@
-import ProjectCard from "./ProjectCard";
+import ProjectCard from './ProjectCard';
 
-function Projects({ projects }) {
+export default function Projects({ projects }) {
   return (
-    <section id="projects">
-      <h2>Projects</h2>
-
-      {projects.map((project, index) => (
-        <ProjectCard
-          key={index}
-          title={project.title}
-          description={project.description}
-          tech={project.tech}
-        />
-      ))}
+    <section id="projects" className="projects">
+      <h2 className="section-title">Projects</h2>
+      <div className="projects-grid">
+        {projects.map((project, index) => (
+          <ProjectCard 
+            key={index} 
+            title={project.title} 
+            description={project.description} 
+            tech={project.tech} 
+          />
+        ))}
+      </div>
     </section>
   );
 }
-
-export default Projects;
