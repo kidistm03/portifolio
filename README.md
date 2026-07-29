@@ -19,6 +19,7 @@ A modern, responsive personal portfolio web application built with **React**, **
 - **Build Tool**: Vite
 - **Styling**: Vanilla CSS (CSS Variables, Flexbox, CSS Grid, Media Queries)
 - **Deployment**: Vercel 
+- **GitHub for version control**
 
 
 
