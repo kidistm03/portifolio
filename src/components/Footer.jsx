@@ -1,9 +1,7 @@
-function Footer() {
+export default function Footer() {
   return (
-    <footer>
-      <p>© 2026 Kidist Meseret</p>
+    <footer className="footer">
+      <p>© 2026 Kidist Meseret. All rights reserved.</p>
     </footer>
   );
 }
-
-export default Footer;

@@ -1,8 +1,7 @@
-function Navbar({ name }) {
+export default function Navbar() {
   return (
     <nav className="navbar">
-      <h2>{name}</h2>
-
+      <h2>Kidist Meseret</h2>
       <div className="nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -12,5 +11,3 @@ function Navbar({ name }) {
     </nav>
   );
 }
-
-export default Navbar;

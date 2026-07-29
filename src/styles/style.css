@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. Global Variables & Reset
+   1. Global Variables & Base Reset
    ========================================================================== */
 :root {
   --primary-gold: #d4af37;
@@ -59,7 +59,7 @@ section {
 }
 
 /* ==========================================================================
-   2. Navbar.jsx
+   2. Navbar Component
    ========================================================================== */
 .navbar {
   position: sticky;
@@ -95,7 +95,7 @@ section {
 }
 
 /* ==========================================================================
-   3. Hero.jsx
+   3. Hero Component
    ========================================================================== */
 .hero {
   min-height: 90vh;
@@ -142,7 +142,7 @@ section {
   max-width: 550px;
 }
 
-/* Hero Buttons */
+/* Buttons */
 .buttons {
   margin-top: 35px;
   display: flex;
@@ -213,7 +213,7 @@ section {
 }
 
 /* ==========================================================================
-   4. About.jsx
+   4. About Component
    ========================================================================== */
 .about {
   background-color: #111111;
@@ -230,17 +230,15 @@ section {
 }
 
 /* ==========================================================================
-   5. Skills.jsx & SkillCard.jsx
+   5. Skills & SkillCard Components
    ========================================================================== */
-.skills-grid,
-.skills-container {
+.skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   gap: 20px;
   margin-top: 20px;
 }
 
-/* SkillCard component container styling */
 .skill-card {
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -248,7 +246,6 @@ section {
   padding: 20px 15px;
   text-align: center;
   transition: all var(--transition-fast);
-  cursor: default;
 }
 
 .skill-card:hover {
@@ -257,31 +254,26 @@ section {
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.15);
 }
 
-.skill-card h4,
-.skill-card span,
-.skill-card p {
+.skill-card h4 {
   color: var(--text-white);
   font-size: 16px;
   font-weight: 600;
 }
 
-.skill-card:hover h4,
-.skill-card:hover span {
+.skill-card:hover h4 {
   color: var(--primary-gold);
 }
 
 /* ==========================================================================
-   6. Projects.jsx & ProjectCard.jsx
+   6. Projects & ProjectCard Components
    ========================================================================== */
-.projects-grid,
-.projects-container {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
   margin-top: 20px;
 }
 
-/* ProjectCard component container styling */
 .project-card {
   background-color: var(--bg-card);
   padding: 30px;
@@ -317,7 +309,6 @@ section {
   margin-bottom: 20px;
 }
 
-.project-tags,
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -325,9 +316,7 @@ section {
   margin-top: auto;
 }
 
-.project-tags span,
-.project-tech span,
-.tech-badge {
+.project-tech span {
   background-color: rgba(212, 175, 55, 0.1);
   color: var(--primary-gold);
   font-size: 12px;
@@ -340,7 +329,7 @@ section {
 }
 
 /* ==========================================================================
-   7. Contact.jsx
+   7. Contact Component
    ========================================================================== */
 .contact {
   background-color: #111111;
@@ -384,10 +373,9 @@ section {
 }
 
 /* ==========================================================================
-   8. Footer.jsx
+   8. Footer Component
    ========================================================================== */
-.footer,
-footer {
+.footer {
   text-align: center;
   padding: 30px 10%;
   background-color: #080808;
@@ -397,7 +385,7 @@ footer {
 }
 
 /* ==========================================================================
-   9. Media Queries (Fully Responsive Layouts)
+   9. Media Queries (Responsive Layouts)
    ========================================================================== */
 @media (max-width: 992px) {
   section {
@@ -472,20 +460,5 @@ footer {
 
   .contact-links a {
     text-align: center;
-  }
-}
-/* Smooth Fade-In Effect on Scroll */
-section {
-  animation: fadeIn 0.8s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

@@ -1,38 +1,24 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-import data from "./data";
+import { skillsData, projectsData } from './data';
+import './styles/style.css';
 
-function App() {
+export default function App() {
   return (
-    <>
-      <Navbar name={data.name} />
-
-      <Hero
-        name={data.name}
-        title={data.title}
-      />
-
-      <About about={data.about} />
-
-      <Skills skills={data.skills} />
-
-      <Projects projects={data.projects} />
-
-      <Contact
-        email={data.email}
-        github={data.github}
-        linkedin={data.linkedin}
-      />
-
+    <div>
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills skills={skillsData} />
+      <Projects projects={projectsData} />
+      <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
-
-export default App;

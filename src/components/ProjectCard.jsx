@@ -1,4 +1,4 @@
-export default function ProjectCard({ title, description, tech }) {
+export default function ProjectCard({ title, description, tech = [] }) {
   return (
     <div className="project-card">
       <div>

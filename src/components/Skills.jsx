@@ -1,6 +1,6 @@
 import SkillCard from './SkillCard';
 
-export default function Skills({ skills }) {
+export default function Skills({ skills = [] }) {
   return (
     <section id="skills" className="skills">
       <h2 className="section-title">Skills</h2>
